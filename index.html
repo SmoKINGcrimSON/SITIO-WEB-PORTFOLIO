@@ -1,0 +1,365 @@
+<!DOCTYPE html> <!--Indica versión html que estamos usando-->
+<html>
+    <!--metadatos, información extra, archivos css que vamos a cargar-->
+    <head>
+        <meta charset="utf-8"> <!-- codificación que debe usar -->
+        <meta name="viewport" content="width=device-width"> 
+        <!--width and height page have portability with, for example,
+        cellphone viewports.-->
+        <title>SMOKING CRIMSON PORTFOLIO</title> <!--important for seo-->
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#8f7ada">
+        <meta name="Author" content="SmoKING" lang="en">
+        <meta name="keywords" lang="en-us" 
+        content="portfolio">
+        <meta name="description" 
+        content="Fernando Guerrero portfolio, &quot;Hi, my name is
+        Fernando Guerrero, i'm studying system engineer in the UPN
+        university from Peru...&quot;">
+        <!--Este metadato sirve para la descripción que aparece
+        de una página web en el navegador, es importante para el
+        SEO-->
+        <!-- OPEN GRAPH!: conjunto de etiquetas de contenido que se ve bien -->
+        <meta property="og:title" 
+        content="Portfolio de un ingeniero de sistemas">
+        <meta property="og:description" 
+        content="Portfolio de un ingeniero de sistemas">
+        <meta property="og:image" 
+        content="/images/FionaGilman.gif">
+        <meta property="og:image:alt" 
+        content="Una foto de una chica muy mona muy mona">
+        <link rel="icon" type="image/jpg" href="images/FionaGilman.gif"> 
+        <!--se le pone link y no metadato porque está enlazando a
+        un recurso-->
+        <!--COMENTARIOS UwU-->
+        <link rel="alternate" href="https://portfolioSmoKING.dev/es"
+        hreflang="es-ESP"> <!--página en español-->
+        <link rel="canonical" href="https://portfolioSmoKING.dev/en-us">
+        <!--indica que ambas páginas son canónicas-->
+        <!--Recurso externo alternativo a la página-->
+        <!--con la etiqueta style agregamos los estilos de css-->
+        <style>
+            h1 {
+                color: rgb(98, 98, 194)
+                
+            }
+            body{
+                background: rgb(189, 121, 214);
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            lo que va entre <> es una etiqueta
+            todo lo que va entre <h1></h1> es un elemento
+        -->
+        <header>
+            <h1>SMOKING CRIMSON PORTFOLIO</h1>
+            <nav>
+                <a href="#experience">experience</a>
+                <a href="#projects">projects</a> <!--enlaces internos-->
+                <a target="_blank" rel="noreferrer"
+                href="https://www.youtube.com/channel/UC9lciLCKzgKAhgxnJ68oaww">youtube channel</a>
+
+            </nav>
+            <!--representa una sección de una página cuyo 
+            propósito es proporcionar enlaces de navegación:
+            menús, tablas de contenido e índices-->
+        </header> <!--cabecera: puede haber más de una-->
+        <!--utilizar el dialog: sirve para mostrar un cuadro de diálogo por encima-->
+        <dialog id="modal">
+            <h1>¿Sabías que podías abrir una modal así?</h1>
+            <p>¡Y es totalmente nativo!</p>
+            <button id="cerrar">Cerrar modal</button>
+        </dialog>
+
+        <button id="abrir">Ver más información</button>
+
+        <script>
+            window.abrir.addEventListener('click', () => {
+                window.modal.showModal()
+            })
+            window.cerrar.addEventListener('click', () => {
+                window.modal.close()
+            })
+        </script>
+        <!--trabajando con iframes-->
+        <iframe width="560" height="315" src="https://programa-c.blogspot.com/2010/04/juego-opengl.html" 
+        title="Sitio web OpenGL" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+        <!--desde aquí empieza el main-->
+        <main>
+        <!--main is the most important content of the page,
+        only must be one-->
+        <br>
+        <h2>About me?</h2>
+        <br>
+        <p lang="en">Hi! my name is Fernando Guerrero, I'm a 
+            <strong>student of systems engineer career</strong> 
+            from the <strong>UPN</strong>, a university from Peru. I'm
+        peruvian obviusly xD but i mention it just in case. I'm
+        currently learning lots of different programming lenguages,
+        and my favorite is C++ becouse i like to work with 
+        specifications like OpenGL. I worked in the past with other
+        lenguages like java and C#, but currently i have had interest
+        in web development. So... this page will be my starting point,
+        i will put an random image of a character from a game that i
+        like just for practice with the image label xD.
+        </p>
+        <br>
+        <!--Imágenes son elementos reemplazables, o sea, no etiquetas
+        que no necesitan apertura ni cierre.-->
+        <a href="/images/FionaGilman.gif" download>
+        <!--la etiqueta download te permite descargar el recurso al
+        pc del cliente-->
+        <!--el download sólo funciona con recursos que se tengan
+        en el propio dominio-->
+        <image src="images/FionaGilman.gif" 
+        style="width: 25%; aspect-ratio: 1/1;"
+        title="random image xD" alt="una foto de una pelirroja muy mona"/>
+        </a>
+        <br>
+        <br>
+        <label>Seleccione una cosa random: </label>
+            <select id="random" name="ran">
+                <option value="uno">uno</option>
+                <option value="dos">dos</option>
+                <option value="tres">tres</option>
+                <option value="cuatro">cuatro</option>
+            </select>
+        <!--Otros elementos reemplazables, como image-->
+        <!--
+            <input type="date"/>
+        -->
+        <br>
+        <h2 id="experience">my experience in software companies</h2>
+        <ul>
+            <li class="item-workexpirience">Nothing for now</li>
+            <li class="item-workexpirience">Dungeons and dragons API
+            <li class="item-workexpirience"><a href="https://www.youtube.com/channel/UC9lciLCKzgKAhgxnJ68oaww"
+                target="_blank" rel="noreferrer">Canal de youtube</a></li>
+        </ul>
+        <!--Atributos de las etiquetas: globales y específicos-->
+        <!--los atributos booleanos funcionan porque aparecen, o sea,
+        no necesitan valor.-->
+        <br>
+        <h2>
+            <!--id atributte: un identificador único en un documento
+            html, un atributo global.-->
+            <img loading="lazy" src="images/mage.jpg" title="Otra imagen random xD" 
+            alt="otra imagen épica para mantener vuestra atención"
+            id="imagen_mago" style="width: 50%; aspect-ratio: 579/914;"/>
+        </h2>
+        <br>
+        <!--cuando ejecutamos html en un navegador, nos carga un 
+        estilo por defecto de nuestra página web, que de momento
+        sólo tiene etiquetas, the default style change for each 
+        browser, this is known as stylessheet agent and could
+        be consulted in the inspector web tool-->
+        <h2 id="projects">Realized Projects</h2>
+
+        <aside>
+            <header>
+                <h3>My favorite tecnologies</h3>
+            </header>
+            <ol start="A" type="A">
+                <li>HTML</li>
+                <li value="B">C++</li>
+                <li>C#</li>
+                <li>JAVA</li>
+                <li>MySQL</li>
+            </ol>
+        </aside> <!--aside is something separated from the main
+        content-->
+
+        <section>
+            <!--first article-->
+            <article>
+                <header>
+                    <h4>Corporative web-site</h4>
+                </header>
+                <p>
+                    Corporative web site development with a
+                    friendly and modern interface
+                </p>
+                <footer>
+                    <small>
+                        Implemented tecnologies: React, Node.js,
+                        MongoDB
+                    </small><!--small se usa para temas de copyright
+                    , breves aclaraciones sin mucha importancia,
+                    contenido anexo, etc-->
+                </footer><!--pie de página-->
+            </article>
+            <!--second article-->
+            <article>
+                <header>
+                    <h4>Corporative web-site</h4>
+                </header>
+                <p>
+                    Corporative web site development with a
+                    friendly and modern interface
+                </p>
+                <footer>
+                    <small>
+                        Implemented tecnologies: React, Node.js,
+                        MongoDB
+                    </small><!--small se usa para temas de copyright
+                    , breves aclaraciones sin mucha importancia,
+                    contenido anexo, etc-->
+                </footer><!--pie de página-->
+            </article>
+            <!--third article-->
+            <article>
+                <header>
+                    <h4>Corporative web-site</h4>
+                </header>
+                <p>
+                    Corporative web site development with a
+                    friendly and modern interface
+                </p>
+                <footer>
+                    <small>
+                        Implemented tecnologies: React, Node.js,
+                        MongoDB
+                    </small><!--small se usa para temas de copyright
+                    , breves aclaraciones sin mucha importancia,
+                    contenido anexo, etc-->
+                </footer><!--pie de página-->
+            </article>
+            <!--image of a webpage-->
+            <article>
+                <image style="width: 100%; aspect-ratio: 16/9;"
+                alt="captura de pantalla de una página web" loading="lazy" src="images/webpageimage.png"></image>
+                <footer>
+                    <small>pequeño ejemplo de página que puedo hacer.</small>
+                </footer>
+            </article>
+        </section>
+        <br>
+        <!--Otra cosa-->
+        <section>
+            <h2>Frequent Questions</h2>
+            <!--elemento para caja desplegable:-->
+            <!--sumario estudios-->
+            <details>
+                <summary>What studies do you have?</summary>
+                <p>
+                    I'm currently study system enginier in the
+                    UPN university from Peru, I'm in fourth year
+                    of the career. I also can speak, read and write
+                    in english and I'm taking courses of japanese.
+                </p>
+            </details>
+            <!--sumario hobbies-->
+            <details>
+                <summary>What are your favorite hobbies?</summary>
+                <p>
+                    I love videogames, movies and books, my favorite
+                    type of games are RPG's. My favorite movies
+                    are animated and action movies. My favorite
+                    genres in books are horror and fantasy.
+                </p>
+            </details>
+            <!--sumario lenguaje de programación favorito-->
+            <details>
+                <summary>What is your favorite programming lenguage?</summary>
+                <p>
+                    My favorite lenguage is C++ becouse it's a
+                    very typed lenguage but it's potent and fast.
+                    I'm currently learning modern OpenGL for create
+                    videogames.
+                </p>
+            </details>
+        </section>
+        <!--Formulario-->
+        <section>
+            <h2>Contact Formulary</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <!--name:-->
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name"
+                    placeholder="SmoKING" required>
+                    <!--el atributo for hace que cuando se
+                    haga click en el label, te lleve directamente
+                    al input-->
+                    <!--e-mail:-->
+                    <br>
+                    <br>
+                    <div>
+                        <label> Email:
+                            <input type="email" name="email"
+                            placeholder="fercho@outlook.com"
+                            required>
+                        </label>
+                    </div>
+                    <br>
+                    <div>
+                        <label> phone:
+                            <input type="tel" name="telephone"
+                            placeholder="+51 950209437" required
+                            pattern="[0-9][9]">
+                        </label>
+                    </div>
+                </fieldset>
+                <!--más opciones-->
+                <fieldset>
+                    <legend>Others</legend>
+                    <label for="why">Why you want contact me?</label>
+                    <br><br>
+                    <!--selectionar multiples opciones:-->
+                    <div>
+                        <select name="why" id="why">
+                            <option value="1">work</option>
+                            <option value="2">query</option>
+                            <option value="3">more information</option>
+                        </select>
+                    </div>
+                    <br>
+                    <!--terminos y condiciones-->
+                    <div>
+                        <label for="terms">Do you accept terms and conditions?</label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                    </div>
+                    <br>
+                    <!--autocompletado-->
+                    <div>
+                        <!--lista de datos-->
+                        <datalist id="lenguages">
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="Java"></option>
+                            <option value="C#"></option>
+                            <option value="C++"></option>
+                        </datalist>
+                        <label for="inputlenguage">Which lenguage do you want help with: </label>
+                        <input id="inputlenguage" list="lenguages" name="lenguages">
+                    </div>
+                </fieldset>
+                <button type="submit">Enviar contacto</button>
+                <!--los botones que están dentro de un formulario
+                son de type="submit" por defecto-->
+            </form>
+        </section>
+        </main>
+        <br>
+        <footer>
+            <small>
+                Copyright @ 2023 - Smoking's portfolio
+            </small>
+            <fieldset>
+                <legend>contáctame personalmente</legend>
+                <!-- Aquí colocarías los elementos relacionados dentro del grupo -->
+                <nav>
+                    <a href="mailto:fernandolol169@outlook.com">my outlook mail</a>
+                    <a href="mailto:ferchowarrior169@gmail.com">my gmail</a>
+                    <a href="tel:+51950209437">call me</a>
+                    <a href="whatsapp://send?phone=950209437">send me a whatsapp message</a>
+                </nav>
+            </fieldset>
+        </footer>
+    </body>
+</html>
