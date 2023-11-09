@@ -39,12 +39,44 @@
         <!--Recurso externo alternativo a la página-->
         <!--con la etiqueta style agregamos los estilos de css-->
         <style>
+            /*una buena práctica en css es tener muchas clases
+            y pocos identificadores, y no crear estilos para
+            tipos de etiquetas*/
             h1 {
-                color: rgb(98, 98, 194)
-                
+                /*color: #000000aa*/
+                /*color: rgba(red, green, blue, alpha) legacy*/
+                /*color: rgb(0 0 0 / 10%)*/ /*moderno*/
+                /*color: hsl(60, 100%, 50%) /*matiz, saturación, luminosidad*/
+                /*color: oklch(348 83% 44% / 50%) /*lightness, chroma, hue*/ /*aún no está suportado en todos los sitios al ser muy nuevo.*/
+                /*color: transparent*/
+                /*color: #09f /*0099ff->shortcut*/
+                color: rgba(116, 33, 124, 0.5);
+                border-width: 3px;
+                border-top-right-radius: 20%;
+                border-color: #000;
+                /*border-color: currentColor ->valor actual de color*/
+                border-style: solid;
+                font-family: monospace;
+                /**/
             }
             body{
-                background: rgb(189, 121, 214);
+                background: rgb(189, 126, 212);
+                font-family: sans-serif;
+            }
+            /*the point '.' indicate that is a class of 
+            html elements*/
+            .upper_anchor{
+                color:rgb(68 78 218 / 50%)
+            }
+            /*no se recomienda abusar de los id para estilar*/
+            #abrir{
+                background-color: rgb(81, 81, 206);
+                border: 0px;
+                color: rgb(255 255 255/80%);
+            }
+            .description{
+                border: 3px solid rgb(148, 65, 65); /*la propiedad borde
+                no se hereda*/
             }
         </style>
     </head>
@@ -56,11 +88,10 @@
         <header>
             <h1>SMOKING CRIMSON PORTFOLIO</h1>
             <nav>
-                <a href="#experience">experience</a>
-                <a href="#projects">projects</a> <!--enlaces internos-->
-                <a target="_blank" rel="noreferrer"
+                <a class="upper_anchor" href="#experience">experience</a>
+                <a class="upper_anchor" href="#projects">projects</a> <!--enlaces internos-->
+                <a class="upper_anchor" target="_blank" rel="noreferrer"
                 href="https://www.youtube.com/channel/UC9lciLCKzgKAhgxnJ68oaww">youtube channel</a>
-
             </nav>
             <!--representa una sección de una página cuyo 
             propósito es proporcionar enlaces de navegación:
@@ -95,7 +126,7 @@
         <br>
         <h2>About me?</h2>
         <br>
-        <p lang="en">Hi! my name is Fernando Guerrero, I'm a 
+        <p class="description" lang="en">Hi! my name is Fernando Guerrero, I'm a 
             <strong>student of systems engineer career</strong> 
             from the <strong>UPN</strong>, a university from Peru. I'm
         peruvian obviusly xD but i mention it just in case. I'm
